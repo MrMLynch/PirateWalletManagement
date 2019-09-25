@@ -50,12 +50,12 @@ cli_daemon=$(cat config.json | jq -r .cli_daemon)
 data_dir=$(cat config.json | jq -r .data_dir)
 
 # check that cli and daemon files exist
-if [ ! -f ${cli} ]; then
+if [ ! -f $(echo ${cli} | awk '{print $1}') ]; then
   echo -e "[$(timestamp)] ${RED}[ERROR]: ${cli} not found!${RESET}"
   exit 0
 fi
 
-if [ ! -f ${cli_daemon} ]; then
+if [ ! -f $(echo ${cli_daemon} | awk '{print $1}') ]; then
   echo -e "[$(timestamp)] ${RED}[ERROR]: ${cli_daemon} not found!${RESET}"
   exit 0
 fi
