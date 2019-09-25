@@ -1,0 +1,6 @@
+{
+  "cli": "/home/user/komodo/src/komodo-cli -ac_name=PIRATE",
+  "cli_daemon": "/home/user/komodo/src/komodod -ac_name=PIRATE -ac_supply=0 -ac_reward=25600000000 -ac_halving=77777 -ac_private=1",
+  "data_dir": "/home/user/.komodo/PIRATE",
+  "live": 0
+}
